@@ -18,7 +18,9 @@ function Card({ number, name, image }) {
           {/* <p>{name}</p> */}
         </div>
         <div className="card-back">
-          <img src={image} alt={name} />
+
+            <strong>{name}</strong>
+          {/* <img src={image} alt={name} /> */}
         </div>
       </div>
     </div>
