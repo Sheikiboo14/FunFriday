@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Card from "./card"; // keep lowercase if the file is named 'card.js'
+import Card from "./Card"; // keep lowercase if the file is named 'card.js'
 
 const leaders = [
   "Leader 1",
