@@ -2,12 +2,7 @@ import React from "react";
 import "./App.css";
 import Card from "./Card"; // keep lowercase if the file is named 'card.js'
 
-const leaders = [
-  "Leader 1",
-  "Leader 2",
-  "Leader 3",
-  "Leader 4"
-];
+
 
 const employees = [
   "Ilias Ahamed M",          // 1
