@@ -1,6 +1,13 @@
 import React from "react";
 import "./App.css";
-import Card from "./Card";
+import Card from "./card"; // keep lowercase if the file is named 'card.js'
+
+const leaders = [
+  "Leader 1",
+  "Leader 2",
+  "Leader 3",
+  "Leader 4"
+];
 
 const employees = [
   "Gopikannan V", "Gnanasekar D", "Sai Sandeep B", "Ilias Ahamed M",
@@ -15,13 +22,29 @@ function App() {
   return (
     <div className="app">
       <h1>Fun Friday</h1>
+
+      {/* Team Leaders Section */}
+      <h2>Team Leaders</h2>
+      <div className="card-grid">
+        {leaders.map((name, index) => (
+          <Card
+            key={`leader-${index}`}
+            number={`L${index + 1}`}
+            name={name}
+            image={`/images/leader${index + 1}.jpg`} // Add these images to public/images
+          />
+        ))}
+      </div>
+
+      {/* Team Members Section */}
+      <h2>Team Members</h2>
       <div className="card-grid">
         {employees.map((name, index) => (
           <Card
-            key={index}
+            key={`employee-${index}`}
             number={index + 1}
             name={name}
-            image={`/images/${index + 1}.jpg`} // Make sure these exist in public/images/
+            image={`/images/${index + 1}.jpg`}
           />
         ))}
       </div>
