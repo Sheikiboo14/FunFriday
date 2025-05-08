@@ -59,7 +59,7 @@ function App() {
           <Card
             key={`employee-${index}`}
             number={index + 1}
-            name={name}
+            name={name.toUpperCase()}
             image={`/images/${index + 1}.jpg`}
           />
         ))}
