@@ -33,8 +33,9 @@ function Card({ number, name, image, disableFlip = false }) {
       ) : (
         <div className="card no-flip">
           {image && !imageError && (
-            <img src={image} alt="non-flip-card" onError={handleImageError} />
+            <img src={image} alt={name} onError={handleImageError} />
           )}
+          <strong>{name}</strong>
         </div>
       )}
     </div>

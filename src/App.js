@@ -1,69 +1,103 @@
 import React from "react";
 import "./App.css";
-import Card from "./Card"; // keep lowercase if the file is named 'card.js'
-
-
+import Card from "./Card";
 
 const employees = [
-  "Ilias Ahamed M",          // 1
-  "Hariharan samy",          // 2
-  "Krishnan P",              // 3
-  "Gnanasekar D",            // 4
-  "Vamsi krishna",           // 5
-  "Ahamed Asraf M",          // 6
-  "Karthick",                // 7
-  "Sakthi Swetha G",         // 8
-  "HARIHARA PANDI.K",        // 9
-  "Bhadri Narayanan AJ",     // 10
-  "Shankar G",               // 11
-  "Santhosh P",              // 12
-  "Gopikannan V",            // 13
-  "Shathakumar C",           // 14
-  "Kesavan",                 // 15
-  "kabilan",                 // 16
-  "Sai Sandeep B",           // 17
-  "Nivetha P",               // 18
-  "Sumithra",                // 19
-  "Risvan M P",              // 20
-  "Siva Sankar & Rahul",     // 21
-  "Raghavan P",              // 22
-  "Rajesh",                  // 23
-  "DS Prakash"               // 24
+  "Ilias Ahamed M", "Hariharan Samy", "Krishnan P", "Gnanasekar D", "Vamsi Krishna",
+  "Ahamed Asraf M", "Karthick", "Sakthi Swetha G", "HARIHARA PANDI.K", "Bhadri Narayanan AJ",
+  "Shankar G", "Santhosh P", "Gopikannan V", "Shathakumar C", "Kesavan",
+  "Kabilan", "Sai Sandeep B", "Nivetha P", "Sumithra", "Risvan M P",
+  "Siva Sankar & Rahul", "Raghavan P", "Rajesh", "DS Prakash"
+];
+
+const funCommittee = ["Dharani", "Jeeva", "Ibrahim", "Santhos", "Yogitha"];
+const leaders = ["Arul Prakash", "Narayanan", "Prakash N", "PrabhaKaran"];
+
+const pointsTable = [
+  { team: "Team A", firstFF: "00", secondFF: "00", points: "00" },
+  { team: "Team B", firstFF: "00", secondFF: "00", points: "00" },
+  { team: "Team C", firstFF: "00", secondFF: "00", points: "00" },
+  { team: "Team D", firstFF: "00", secondFF: "00", points: "00" }
 ];
 
 
 function App() {
   return (
     <div className="app">
-      <h1>Fun Friday</h1>
+      <h1>Fun Friday - May 2025</h1>
 
-      {/* Team Leaders Section */}
-      {/* <h2>Team Leaders</h2>
-      <div className="card-grid">
-        {leaders.map((name, index) => (
-          <Card
-  key={`leader-${index}`}
-  number={`L${index + 1}`}
-  name={name}
-  image={`/images/leader${index + 1}.jpg`} // ← correct
-/>
-        ))}
-      </div> */}
+      {/* Fun Committee Members (Non-Flip) */}
+      <section className="section">
+        <h2>Fun Committee Members</h2>
+        <div className="card-grid">
+          {funCommittee.map((_, index) => (
+            <Card
+              key={`fun-${index}`}
+              image={`/images/fun${index + 1}.jpg`}
+              disableFlip={true}
+            />
+          ))}
+        </div>
+      </section>
 
-      {/* Team Members Section */}
-      <h2>Team Members Card</h2>
+      {/* Team Leaders (Non-Flip) */}
+      <section className="section">
+        <h2>Team Leaders</h2>
+        <div className="card-grid">
+          {leaders.map((_, index) => (
+            <Card
+              key={`leader-${index}`}
+              image={`/images/leader${index + 1}.jpg`}
+              disableFlip={true}
+            />
+          ))}
+        </div>
+      </section>
 
-      <h4>Click on the Card to Reveal the Name</h4>
-      <div className="card-grid">
-        {employees.map((name, index) => (
-          <Card
-            key={`employee-${index}`}
-            number={index + 1}
-            name={name.toUpperCase()}
-            image={`/images/${index + 1}.jpg`}
-          />
-        ))}
-      </div>
+
+
+      {/* Team Members (Flip Cards) */}
+      <section className="section">
+        <h2>Team Members</h2>
+        <h4>Click on the card to reveal the member</h4>
+        <div className="card-grid">
+          {employees.map((name, index) => (
+            <Card
+              key={`emp-${index}`}
+              number={index + 1}
+              name={name.toUpperCase()}
+              image={`/images/${index + 1}.jpg`}
+              disableFlip={false}
+            />
+          ))}
+        </div>
+      </section>
+
+
+            {/* Points Table */}
+            <section className="section">
+        <h2>Points Table</h2>
+        <table className="points-table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>1st FF</th>
+              <th>2nd FF</th>
+              <th>Total Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pointsTable.map((entry, idx) => (
+              <tr key={`pt-${idx}`}>
+                <td>{entry.team}</td>
+                <td>{entry.firstFF}</td>
+                <td>{entry.secondFF}</td>
+                <td>{entry.points}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
     </div>
   );
 }
