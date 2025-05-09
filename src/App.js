@@ -4,9 +4,9 @@ import Card from "./Card";
 
 const employees = [
   "Ilias Ahamed M", "Hariharan Samy", "Krishnan P", "Gnanasekar D", "Vamsi Krishna",
-  "Ahamed Asraf M", "Karthick", "Sakthi Swetha G", "HARIHARA PANDI.K", "Bhadri Narayanan AJ",
-  "Shankar G", "Santhosh P", "Gopikannan V", "Shathakumar C", "Kesavan",
-  "Kabilan", "Sai Sandeep B", "Nivetha P", "Sumithra", "Risvan M P"
+  "Ahamed Asraf M", "Karthick", "Sakthi Swetha G", "HARIHARA PANDI.K", "Sumithra",
+  "Shankar G", "Santhosh P", "Risvan M P", "Shathakumar C", "Kesavan",
+  "Kabilan", "Sai Sandeep B", "Nivetha P", "Bhadri Narayanan AJ", "Gopikannan V"
   , "Raghavan P","Siva Sankar & Rahul", "Rajesh", "DS Prakash"
 ];
 
