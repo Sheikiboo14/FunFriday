@@ -6,8 +6,8 @@ const employees = [
   "Ilias Ahamed M", "Hariharan Samy", "Krishnan P", "Gnanasekar D", "Vamsi Krishna",
   "Ahamed Asraf M", "Karthick", "Sakthi Swetha G", "HARIHARA PANDI.K", "Bhadri Narayanan AJ",
   "Shankar G", "Santhosh P", "Gopikannan V", "Shathakumar C", "Kesavan",
-  "Kabilan", "Sai Sandeep B", "Nivetha P", "Sumithra", "Risvan M P",
-  "Siva Sankar & Rahul", "Raghavan P", "Rajesh", "DS Prakash"
+  "Kabilan", "Sai Sandeep B", "Nivetha P", "Sumithra", "Risvan M P"
+  , "Raghavan P","Siva Sankar & Rahul", "Rajesh", "DS Prakash"
 ];
 
 const funCommittee = ["Dharani", "Jeeva", "Ibrahim", "Santhos", "Yogitha"];
