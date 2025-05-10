@@ -32,15 +32,15 @@ function Card({ number, name, image, disableFlip = false }) {
         </div>
       ) : (
         <div className="card no-flip">
-          {image && !imageError && (
-            <img src={image} alt="non-flip-card" onError={handleImageError} />
+          {!imageError && image ? (
+            <img src={image} alt={name || "non-flip-card"} onError={handleImageError} />
+          ) : (
+            <div className="member-name">{name}</div>
           )}
         </div>
       )}
     </div>
   );
 }
-
-
 
 export default Card;
