@@ -12,7 +12,6 @@ const employees = [
 ];
 
 const funCommittee = ["Dharani", "Jeeva", "Ibrahim", "Santhos", "Yogitha"];
-const leaders = ["Arul Prakash", "Narayanan", "Prakash N", "PrabhaKaran"];
 const redDragon = ["Arul Prakash", "HARIHARA PANDI.K","Ilias Ahamed M","Krishnan P", "Karthick", "Vamsi Krishna"];
 
 const palayaSoru = ["Narayanan", "Ahamed Asraf M","Nivetha P", "Raghavan P", "Rajesh","Santhosh P"];
@@ -22,16 +21,6 @@ const aaruPadai = ["PrabhaKaran","Bhadri Narayanan AJ", "Kesavan", "Risvan M P",
 const thalaPolaVaruma = ["Prakash N", "Gnanasekar D","Hariharan Samy", "Kabilan", "DS Prakash","Sakthi Swetha G"];
 
 
-const teams = [
-  {
-    name: "Red Dragon",
-    members: ["Alice", "Bob", "Charlie", "Daisy"]
-  },
-  {
-    name: "Blue Phoenix",
-    members: ["Eve", "Frank", "Grace", "Heidi"]
-  }
-];
 
 
 const pointsTable = [
@@ -75,61 +64,65 @@ function App() {
         </div>
       </section> */}
 
-            {/* Team Red Dragon (Non-Flip) */}
-            <section className="section">
-        <h2>Team Red Dragon</h2>
-        <div className="card-grid">
-          {redDragon.map((_, index) => (
-            <Card
-              key={`redDragon-${index}`}
-              image={`/images/redDragon${index + 1}.jpg`}
-              disableFlip={true}
-            />
-          ))}
-        </div>
-      </section>
+{/* Team Red Dragon (Non-Flip) */}
+<section className="section">
+  <h2>Team Red Dragon</h2>
+  <div className="card-grid">
+    {redDragon.map((name, index) => (
+      <Card
+        key={`redDragon-${index}`}
+        name={name}
+        image={`/images/redDragon${index + 1}.jpg`}
+        disableFlip={true}
+      />
+    ))}
+  </div>
+</section>
 
-                  {/* Team Thala Pola Varuma (Non-Flip) */}
-                  <section className="section">
-        <h2>Team Thala Pola Varuma</h2>
-        <div className="card-grid">
-          {thalaPolaVaruma.map((_, index) => (
-            <Card
-              key={`thalaPolaVaruma-${index}`}
-              image={`/images/thalaPolaVaruma${index + 1}.jpg`}
-              disableFlip={true}
-            />
-          ))}
-        </div>
-      </section>
+ {/* Team Thala Pola Varuma (Non-Flip) */}
+<section className="section">
+  <h2>Team Thala Pola Varuma</h2>
+  <div className="card-grid">
+    {thalaPolaVaruma.map((name, index) => (
+      <Card
+        key={`thalaPolaVaruma-${index}`}
+        name={name}
+        image={`/images/thalaPolaVaruma${index + 1}.jpg`}
+        disableFlip={true}
+      />
+    ))}
+  </div>
+</section>
 
-                  {/* Team Palaya Soru (Non-Flip) */}
-                  <section className="section">
-        <h2>Team Palaya Soru</h2>
-        <div className="card-grid">
-          {palayaSoru.map((_, index) => (
-            <Card
-              key={`palayaSoru-${index}`}
-              image={`/images/palayaSoru${index + 1}.jpg`}
-              disableFlip={true}
-            />
-          ))}
-        </div>
-      </section>
+{/* Team Palaya Soru (Non-Flip) */}
+<section className="section">
+  <h2>Team Palaya Soru</h2>
+  <div className="card-grid">
+    {palayaSoru.map((name, index) => (
+      <Card
+        key={`palayaSoru-${index}`}
+        name={name}
+        image={`/images/palayaSoru${index + 1}.jpg`}
+        disableFlip={true}
+      />
+    ))}
+  </div>
+</section>
 
-                  {/* Team Aaru Padai (Non-Flip) */}
-                  <section className="section">
-        <h2>Team Aaru Padai</h2>
-        <div className="card-grid">
-          {aaruPadai.map((_, index) => (
-            <Card
-              key={`aaruPadai-${index}`}
-              image={`/images/aaruPadai${index + 1}.jpg`}
-              disableFlip={true}
-            />
-          ))}
-        </div>
-      </section>
+{/* Team Aaru Padai (Non-Flip) */}
+<section className="section">
+  <h2>Team Aaru Padai</h2>
+  <div className="card-grid">
+    {aaruPadai.map((name, index) => (
+      <Card
+        key={`aaruPadai-${index}`}
+        name={name}
+        image={`/images/aaruPadai${index + 1}.jpg`}
+        disableFlip={true}
+      />
+    ))}
+  </div>
+</section>
 
 
             {/* Points Table */}
