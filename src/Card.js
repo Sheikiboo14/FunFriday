@@ -41,4 +41,6 @@ function Card({ number, name, image, disableFlip = false }) {
   );
 }
 
+
+
 export default Card;
